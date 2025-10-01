@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriScan Project Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9FAF4;
+            color: #383A32;
+        }
+        .active-nav {
+            color: #6A7D4F;
+            border-bottom-color: #6A7D4F;
+        }
+        .inactive-nav {
+            border-bottom-color: transparent;
+        }
+        .active-feature-btn {
+            background-color: #6A7D4F;
+            color: #F9FAF4;
+        }
+        .inactive-feature-btn {
+            background-color: #E3E6DA;
+            color: #383A32;
+        }
+        .active-timeline-dot {
+            background-color: #6A7D4F;
+            transform: scale(1.25);
+        }
+        .inactive-timeline-dot {
+            background-color: #C1C8B5;
+        }
+        .timeline-line {
+            background-color: #C1C8B5;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="sticky top-0 bg-F9FAF4/80 backdrop-blur-md z-10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-6A7D4F">🥗 NutriScan</h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#problem" class="pb-1 border-b-2 transition-all duration-300 active-nav">The Problem</a>
+                <a href="#features" class="pb-1 border-b-2 transition-all duration-300 inactive-nav">Features</a>
+                <a href="#tech" class="pb-1 border-b-2 transition-all duration-300 inactive-nav">Technology</a>
+                <a href="#roadmap" class="pb-1 border-b-2 transition-all duration-300 inactive-nav">Roadmap</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <section class="text-center py-16">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Your Grocery, Decoded.</h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-600">NutriScan is a mobile grocery tracking app that turns your shopping cart into smart, simple, and healthy meals. It's designed to make healthy eating effortless and intuitive.</p>
+        </section>
+
+        <section id="problem" class="py-16">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h2 class="text-sm font-semibold uppercase tracking-wider text-6A7D4F mb-2">The Challenge</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4">Healthy Eating Starts at the Store, But It's Complicated.</h3>
+                    <p class="text-gray-600 mb-4">Most people want to eat healthier, but face challenges like confusing nutrition labels, impulse buys, and food waste from unused ingredients. There's a clear gap between buying groceries and turning them into meals that align with health goals.</p>
+                </div>
+                 <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+                    <h4 class="text-lg font-semibold mb-4 text-center">Introducing the Solution</h4>
+                    <p class="text-gray-700 text-center text-lg">NutriScan makes grocery tracking effortless and intelligent. By providing tailored recipe recommendations based on what users buy, it removes the guesswork and calorie counting, turning a shopping cart into a personalized meal plan.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-sm font-semibold uppercase tracking-wider text-6A7D4F mb-2">Core Features</h2>
+                <h3 class="text-3xl md:text-4xl font-bold">How NutriScan Helps</h3>
+            </div>
+            <div class="flex justify-center space-x-2 md:space-x-4 mb-8">
+                <button id="btn-track" class="px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold transition-all duration-300 text-sm md:text-base active-feature-btn">🛒 Track Groceries</button>
+                <button id="btn-recipes" class="px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold transition-all duration-300 text-sm md:text-base inactive-feature-btn">🍎 Get Recipes</button>
+                <button id="btn-scan" class="px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold transition-all duration-300 text-sm md:text-base inactive-feature-btn">📷 Scan Barcodes</button>
+            </div>
+
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+                <div id="feature-content" class="md:pr-8">
+                    <h4 id="feature-title" class="text-2xl font-bold mb-3">Keep a Record of Your Groceries</h4>
+                    <p id="feature-description" class="text-gray-600">Keep a digital log of your grocery items in one place. NutriScan helps you monitor what you buy, avoid waste by tracking expiration dates, and stay aligned with your nutrition goals.</p>
+                </div>
+                <div id="feature-visual" class="bg-gray-100 p-4 rounded-2xl border-2 border-gray-200 h-96 overflow-y-auto">
+                </div>
+            </div>
+        </section>
+
+        <section id="tech" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-sm font-semibold uppercase tracking-wider text-6A7D4F mb-2">Technology Stack</h2>
+                <h3 class="text-3xl md:text-4xl font-bold">Built With Modern Tools</h3>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-200 text-center">
+                    <div class="text-4xl mb-2">📱</div>
+                    <h4 class="font-bold">React Native</h4>
+                    <p class="text-sm text-gray-500">Frontend</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-200 text-center">
+                    <div class="text-4xl mb-2">💾</div>
+                    <h4 class="font-bold">Xano</h4>
+                    <p class="text-sm text-gray-500">Backend & DB</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-200 text-center">
+                    <div class="text-4xl mb-2">🧠</div>
+                    <h4 class="font-bold">OpenAI API</h4>
+                    <p class="text-sm text-gray-500">AI Recipes</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-200 text-center">
+                    <div class="text-4xl mb-2">🌱</div>
+                    <h4 class="font-bold">Spring Boot</h4>
+                    <p class="text-sm text-gray-500">Future Backend</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-sm font-semibold uppercase tracking-wider text-6A7D4F mb-2">Project Roadmap</h2>
+                <h3 class="text-3xl md:text-4xl font-bold">From Concept to Future</h3>
+            </div>
+            <div class="w-full max-w-4xl mx-auto">
+                <div class="relative">
+                    <div class="absolute top-1/2 left-0 right-0 h-1 timeline-line -translate-y-1/2"></div>
+                    <div class="flex justify-between relative">
+                        <div id="dot-w1" class="w-5 h-5 rounded-full cursor-pointer transition-all duration-300 active-timeline-dot" data-stage="w1"></div>
+                        <div id="dot-w3" class="w-5 h-5 rounded-full cursor-pointer transition-all duration-300 inactive-timeline-dot" data-stage="w3"></div>
+                        <div id="dot-w5" class="w-5 h-5 rounded-full cursor-pointer transition-all duration-300 inactive-timeline-dot" data-stage="w5"></div>
+                        <div id="dot-w7" class="w-5 h-5 rounded-full cursor-pointer transition-all duration-300 inactive-timeline-dot" data-stage="w7"></div>
+                        <div id="dot-future" class="w-5 h-5 rounded-full cursor-pointer transition-all duration-300 inactive-timeline-dot" data-stage="future"></div>
+                    </div>
+                    <div class="flex justify-between mt-4 text-xs md:text-sm text-gray-500">
+                        <span class="w-1/5 text-center">Weeks 1-2</span>
+                        <span class="w-1/5 text-center">Weeks 3-4</span>
+                        <span class="w-1/5 text-center">Weeks 5-6</span>
+                        <span class="w-1/5 text-center">Weeks 7-8</span>
+                        <span class="w-1/5 text-center">Future Goals</span>
+                    </div>
+                </div>
+                <div id="roadmap-content" class="mt-8 bg-white p-8 rounded-2xl shadow-lg border border-gray-200 min-h-[150px]">
+                    <h4 id="roadmap-title" class="text-xl font-bold mb-2">FIGMA and Frontend Implementation</h4>
+                    <p id="roadmap-description" class="text-gray-600">The initial phase focused on designing the user interface and experience in Figma, followed by implementing the core frontend components using React Native.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-E3E6DA py-8">
+        <div class="container mx-auto px-6 text-center text-gray-600">
+            <p>&copy; 2025 Matin Tahmazli. A project showcase for NutriScan.</p>
+        </div>
+    </footer>
+
+    <script>
+        const features = {
+            track: {
+                title: 'Keep a Record of Your Groceries',
+                description: 'Keep a digital log of your grocery items in one place. NutriScan helps you monitor what you buy, avoid waste by tracking expiration dates, and stay aligned with your nutrition goals.',
+                visual: () => {
+                    const items = [
+                        { name: 'Ground Beef', qty: '6 Kg', expires: 'Expires: 4/10/2025' },
+                        { name: 'Blueberries', qty: '5 Kg', expires: 'Expires: 4/14/2026' },
+                        { name: 'Banana', qty: '1', expires: 'Expires: 7/10/2025' },
+                        { name: 'Shrimp', qty: '7 Kg', expires: 'Expires: 4/10/2025' },
+                        { name: 'Spinach', qty: '15 ounces', expires: 'Expires: 5/29/2024' },
+                        { name: 'Chicken Breast', qty: '54 kg', expires: '' },
+                    ];
+                    let html = `<div class="p-2 space-y-3"><h3 class="text-xl font-bold text-center mb-2">Grocery List</h3>`;
+                    items.forEach(item => {
+                        html += `<div class="bg-white p-3 rounded-lg shadow-sm flex justify-between items-center"><div><p class="font-semibold">${item.name}</p><p class="text-sm text-gray-500">${item.qty} &bull; ${item.expires}</p></div><div class="flex space-x-1"><span class="w-6 h-6 bg-green-200 rounded-full"></span><span class="w-6 h-6 bg-yellow-200 rounded-full"></span><span class="w-6 h-6 bg-green-200 rounded-full"></span></div></div>`;
+                    });
+                    html += `</div>`;
+                    return html;
+                }
+            },
+            recipes: {
+                title: 'AI-Powered Recipe Recommendations',
+                description: 'Turn your groceries into delicious meals. NutriScan\'s AI suggests personalized recipes based on what’s in your cart, making healthy eating simple and practical.',
+                visual: () => {
+                    const recipes = [
+                        { name: 'Banana Spinach Salad with Grilled Chicken', time: '30 min', cal: '500 cal', tags: ['Healthy', 'Quick'] },
+                        { name: 'Salmon and Spinach Salad', time: '30 min', cal: '500 cal', tags: ['Healthy', 'Quick'] },
+                        { name: 'Beef and Spinach Stir-Fry', time: '30 min', cal: '500 cal', tags: ['Quick', 'Healthy'] },
+                    ];
+                    let html = `<div class="p-2 space-y-3"><h3 class="text-xl font-bold text-center mb-2">Recipe Recommendations</h3>`;
+                     recipes.forEach(recipe => {
+                        html += `<div class="bg-white p-3 rounded-lg shadow-sm">
+                            <p class="font-semibold">${recipe.name}</p>
+                            <p class="text-sm text-gray-500">${recipe.time} &bull; ${recipe.cal}</p>
+                            <div class="mt-2 flex space-x-2">${recipe.tags.map(tag => `<span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">${tag}</span>`).join('')}</div>
+                        </div>`;
+                    });
+                    html += `<div class="text-center mt-4"><button class="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold">? Get AI Suggestions</button></div></div>`;
+                    return html;
+                }
+            },
+            scan: {
+                title: 'Scan for Instant Nutritional Info',
+                description: '(Future Feature) The upcoming barcode scanner will let you scan products for instant nutritional information, making grocery tracking faster and smarter than ever.',
+                visual: () => {
+                    return `<div class="h-full flex flex-col items-center justify-center bg-white rounded-lg p-4">
+                        <div class="text-6xl mb-4">📷</div>
+                        <h4 class="text-xl font-bold">Barcode Scanner</h4>
+                        <p class="text-gray-500 text-center">Coming soon to make your shopping trips even smarter!</p>
+                        <div class="w-full h-1 bg-red-500 mt-8 animate-pulse"></div>
+                    </div>`;
+                }
+            }
+        };
+
+        const roadmap = {
+            w1: {
+                title: 'FIGMA and Frontend Implementation',
+                description: 'The initial phase focused on designing the user interface and experience in Figma, followed by implementing the core frontend components using React Native.'
+            },
+            w3: {
+                title: 'Database Structure and Frontend Debugging',
+                description: 'This period was dedicated to planning the database schema in Xano and debugging the initial frontend build to ensure a stable foundation.'
+            },
+            w5: {
+                title: 'Backend Implementation',
+                description: 'The backend logic was developed using Xano, creating the APIs necessary for the app to manage grocery lists and recipe data.'
+            },
+            w7: {
+                title: 'Integration and Final Debugging',
+                description: 'The frontend and backend were integrated, followed by a final round of debugging to ensure all features worked together seamlessly.'
+            },
+            future: {
+                title: 'Future Steps and Goals',
+                description: 'Future plans include enhancing the UI/UX, integrating a more detailed recipe API, implementing the barcode scanner, and migrating the backend to Spring Boot.'
+            }
+        };
+
+        const featureBtnTrack = document.getElementById('btn-track');
+        const featureBtnRecipes = document.getElementById('btn-recipes');
+        const featureBtnScan = document.getElementById('btn-scan');
+        const featureTitle = document.getElementById('feature-title');
+        const featureDescription = document.getElementById('feature-description');
+        const featureVisual = document.getElementById('feature-visual');
+
+        const allFeatureBtns = [featureBtnTrack, featureBtnRecipes, featureBtnScan];
+
+        function updateFeature(featureKey) {
+            const feature = features[featureKey];
+            featureTitle.textContent = feature.title;
+            featureDescription.textContent = feature.description;
+            featureVisual.innerHTML = feature.visual();
+
+            allFeatureBtns.forEach(btn => {
+                btn.classList.remove('active-feature-btn');
+                btn.classList.add('inactive-feature-btn');
+            });
+
+            const activeBtn = document.getElementById(`btn-${featureKey}`);
+            activeBtn.classList.add('active-feature-btn');
+            activeBtn.classList.remove('inactive-feature-btn');
+        }
+
+        featureBtnTrack.addEventListener('click', () => updateFeature('track'));
+        featureBtnRecipes.addEventListener('click', () => updateFeature('recipes'));
+        featureBtnScan.addEventListener('click', () => updateFeature('scan'));
+
+        const roadmapDots = document.querySelectorAll('[id^="dot-"]');
+        const roadmapTitle = document.getElementById('roadmap-title');
+        const roadmapDescription = document.getElementById('roadmap-description');
+
+        function updateRoadmap(stageKey) {
+            const stage = roadmap[stageKey];
+            roadmapTitle.textContent = stage.title;
+            roadmapDescription.textContent = stage.description;
+
+            roadmapDots.forEach(dot => {
+                dot.classList.remove('active-timeline-dot');
+                dot.classList.add('inactive-timeline-dot');
+            });
+
+            const activeDot = document.getElementById(`dot-${stageKey}`);
+            activeDot.classList.add('active-timeline-dot');
+            activeDot.classList.remove('inactive-timeline-dot');
+        }
+
+        roadmapDots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                updateRoadmap(dot.dataset.stage);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateFeature('track');
+            updateRoadmap('w1');
+        });
+
+        const navLinks = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('main section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 60) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav');
+                link.classList.add('inactive-nav');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active-nav');
+                    link.classList.remove('inactive-nav');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
