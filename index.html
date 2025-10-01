@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NutriScan Project Showcase</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chosen Palette: Warm Sage -->
+    <!-- Application Structure Plan: A single-page narrative structure was chosen to guide the user through the project's story, starting with the problem, presenting NutriScan as the solution, and then detailing its features, tech stack, and roadmap. This linear flow is intuitive and easy to follow. Key interactions include a tab-like toggle for exploring app features and a clickable timeline for the development process, making the information discovery engaging and user-driven rather than static. A new video demonstration section has been added to provide a dynamic overview of the app's functionality. -->
+    <!-- Visualization & Content Choices: Problem/Solution -> Goal: Inform -> Method: Formatted text blocks -> Justification: Clear and direct communication. Demonstration -> Goal: Showcase -> Method: Embedded video -> Justification: Provides a real-world look at the app in action. Features -> Goal: Demonstrate -> Method: Interactive HTML/CSS mockups toggled by JS -> Justification: Provides a dynamic, app-like feel without using static images, enhancing engagement. Tech Stack -> Goal: Inform -> Method: Styled cards in a grid -> Justification: Visually organized and easy to scan. Roadmap -> Goal: Show change/progress -> Method: Interactive JS-powered timeline -> Justification: More engaging than a static list, encourages user exploration of the project's lifecycle. No charts were needed as the report contains no quantitative data suitable for charting. CONFIRMING: NO SVG/Mermaid used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         body {
@@ -46,6 +50,7 @@
             <h1 class="text-2xl font-bold text-6A7D4F">🥗 NutriScan</h1>
             <div class="hidden md:flex space-x-8">
                 <a href="#problem" class="pb-1 border-b-2 transition-all duration-300 active-nav">The Problem</a>
+                <a href="#demonstration" class="pb-1 border-b-2 transition-all duration-300 inactive-nav">Demonstration</a>
                 <a href="#features" class="pb-1 border-b-2 transition-all duration-300 inactive-nav">Features</a>
                 <a href="#tech" class="pb-1 border-b-2 transition-all duration-300 inactive-nav">Technology</a>
                 <a href="#roadmap" class="pb-1 border-b-2 transition-all duration-300 inactive-nav">Roadmap</a>
@@ -69,6 +74,19 @@
                  <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
                     <h4 class="text-lg font-semibold mb-4 text-center">Introducing the Solution</h4>
                     <p class="text-gray-700 text-center text-lg">NutriScan makes grocery tracking effortless and intelligent. By providing tailored recipe recommendations based on what users buy, it removes the guesswork and calorie counting, turning a shopping cart into a personalized meal plan.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="demonstration" class="py-16 bg-white rounded-2xl">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-sm font-semibold uppercase tracking-wider text-6A7D4F mb-2">Live Demo</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mb-8">See NutriScan in Action</h3>
+                <div class="max-w-xl mx-auto bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border-8 border-gray-800">
+                    <video controls loop muted playsinline class="w-full">
+                        <source src="Simulator Screen Recording - iPhone 16 Pro - 2025-04-11 at 03.44.36.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </section>
@@ -323,3 +341,4 @@
     </script>
 </body>
 </html>
+
